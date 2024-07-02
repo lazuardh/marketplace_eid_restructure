@@ -59,7 +59,7 @@ class IntroductionPage extends StatelessWidget {
               labelColor: AppColors.primary,
               buttonColor: AppColors.neutral100,
               borderColor: AppColors.primary,
-              onPressed: () => Navigator.pushNamed(context, PagePath.SignUp),
+              onPressed: () => Navigator.pushNamed(context, PagePath.signUp),
             ),
             const Spacer()
           ],

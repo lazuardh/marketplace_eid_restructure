@@ -34,7 +34,6 @@ class _SignInPageState extends State<SignInPage> {
     super.dispose();
   }
 
-  // bool rememberMe = false;
   bool? rememberMe = true;
   @override
   Widget build(BuildContext context) {
@@ -152,6 +151,11 @@ class _SignInPageState extends State<SignInPage> {
                   borderRadius: AppBorderRadius.normal,
                   onPressed: () {
                     _formKey.currentState!.save();
+                    Navigator.pushNamedAndRemoveUntil(
+                      context,
+                      PagePath.navigation,
+                      (route) => false,
+                    );
                   },
                 ),
                 Gap(height: size.height * 0.02),
@@ -198,7 +202,7 @@ class _SignInPageState extends State<SignInPage> {
                     GestureDetector(
                       onTap: () => Navigator.pushNamed(
                         context,
-                        PagePath.SignUp,
+                        PagePath.signUp,
                       ),
                       child: Text(
                         "Daftar",

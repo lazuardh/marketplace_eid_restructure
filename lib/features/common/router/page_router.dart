@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:marketplace_eid_restructure/features/welcome/presentation/pages/sign_in_page.dart';
-import 'package:marketplace_eid_restructure/features/welcome/presentation/pages/sign_up_page.dart';
-import 'package:marketplace_eid_restructure/features/welcome/presentation/pages/welcome_pages.dart';
 import '../../../lib.dart';
 
 class PageRouter {
@@ -40,10 +37,19 @@ class PageRouter {
 
       /* Register */
       //-------------------------------------------------------
-      case PagePath.SignUp:
+      case PagePath.signUp:
         return _buildRouter(
           settings: settings,
           builder: (arguments) => const SignUpPage(),
+        );
+      //------------------------------------------------------
+
+      /* Navigation */
+      //-------------------------------------------------------
+      case PagePath.navigation:
+        return _buildRouter(
+          settings: settings,
+          builder: (arguments) => const BottomNavigation(),
         );
       //------------------------------------------------------
 
