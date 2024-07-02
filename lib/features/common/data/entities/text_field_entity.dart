@@ -74,7 +74,8 @@ class TextFieldEntity {
   static final List<TextFieldEntity> authRegister = [
     TextFieldEntity(
       textController: TextEditingController(text: ''),
-      hint: "Username",
+      label: "Username",
+      hint: "Input your username",
       keyboardType: TextInputType.text,
       focusNode: FocusNode(),
       validator: (value) {
@@ -87,7 +88,8 @@ class TextFieldEntity {
     ),
     TextFieldEntity(
       textController: TextEditingController(text: ''),
-      hint: "Email Adress",
+      label: "Email",
+      hint: "Input your email",
       keyboardType: TextInputType.emailAddress,
       focusNode: FocusNode(),
       validator: (value) {
@@ -102,7 +104,8 @@ class TextFieldEntity {
     ),
     TextFieldEntity(
       textController: TextEditingController(text: ''),
-      hint: "Password",
+      label: "Password",
+      hint: "Input your password",
       isPassword: true,
       keyboardType: TextInputType.visiblePassword,
       textInputAction: TextInputAction.done,
@@ -119,6 +122,7 @@ class TextFieldEntity {
     ),
     TextFieldEntity(
       textController: TextEditingController(text: ''),
+      label: "Repeat Password",
       hint: "Repeat Password",
       isPassword: true,
       keyboardType: TextInputType.visiblePassword,

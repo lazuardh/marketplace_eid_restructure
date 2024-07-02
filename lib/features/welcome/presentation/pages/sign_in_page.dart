@@ -196,10 +196,10 @@ class _SignInPageState extends State<SignInPage> {
                       width: 5,
                     ),
                     GestureDetector(
-                      onTap: () {
-                        // Navigator.pushReplacementNamed(
-                        //     context, RouteName.register);
-                      },
+                      onTap: () => Navigator.pushNamed(
+                        context,
+                        PagePath.SignUp,
+                      ),
                       child: Text(
                         "Daftar",
                         style: AppTextStyle.regular.copyWith(
