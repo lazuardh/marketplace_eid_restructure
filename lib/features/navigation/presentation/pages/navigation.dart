@@ -69,22 +69,12 @@ class _BottomNavigationWrapperState extends State<BottomNavigationWrapper>
           Expanded(
             child: IndexedStack(
               index: widget._selectedIndex,
-              children: [
-                const Center(
-                  child: Text("data"),
-                ),
-                const Center(
-                  child: Text("data"),
-                ),
-                const Center(
-                  child: Text("data"),
-                ),
-                const Center(
-                  child: Text("data"),
-                ),
-                const Center(
-                  child: Text("data"),
-                ),
+              children: const [
+                HomeScreen(),
+                ArticleScreen(),
+                FavoriteScreen(),
+                HistoryScreen(),
+                ProfileScreen(),
               ],
             ),
           )
@@ -111,7 +101,8 @@ class _BottomNavigationWrapperState extends State<BottomNavigationWrapper>
         backgroundColor: Colors.transparent,
         elevation: 0,
         currentIndex: widget._selectedIndex,
-        showSelectedLabels: false,
+        selectedFontSize: AppFontSize.extraSmall,
+        showSelectedLabels: true,
         showUnselectedLabels: false,
         onTap: (index) => _onItemTapped(index, context),
         items: <BottomNavigationBarItem>[
